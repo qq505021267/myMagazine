@@ -1,0 +1,21 @@
+/* components/search/cmp.wxss */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700rpx;
+    margin: 0 auto;
+}
+
+.container .input {
+    width: 600rpx;
+    height: 80rpx;
+    background-color: #f3f3f3;
+    padding-left: 20rpx;
+    font-size: 28rpx;
+}
+
+.container .text {
+    font-size: 28rpx;
+}

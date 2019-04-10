@@ -1,0 +1,62 @@
+<!--pages/articleDetail/articleDetail.wxml-->
+
+<wxs src="../../tools/filte.wxs" module="filter"></wxs>
+<wxs src="../../tools/format.wxs" module="format"></wxs>
+
+<view class="wrapper">
+    <view class="title-wrapper">
+        <text>{{articleDetail.title}}</text>
+    </view>
+    <view class="author-wrapper">
+        <text class="author">{{articleDetail.author}}</text>
+        <text class="deta">{{articleDetail.publishTime}}</text>
+    </view>
+    <view class="components">
+        <swiper wx:if="{{articleDetail.banner[0]}}" class="banner" indicator-dots="{{true}}" autoplay="{{true}}" interval="3000">
+            <swiper-item wx:for="{{articleDetail.banner}}" wx:key="index">
+                <image src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+
+        <video wx:elif="{{articleDetail.video.src}}" src="{{articleDetail.video.src}}" id="myVideo">
+            <cover-view class="video-image-box" wx:if="{{!play}}">
+                <cover-image src="{{articleDetail.video.poster}}"></cover-image>
+                <cover-view class="play-box" bind:tap="onPlayTap" >
+                    <cover-image src="/image/icon/Icon_circle.png"></cover-image>
+                    <cover-view>{{articleDetail.video.duration}}</cover-view>
+                    </cover-view>
+            </cover-view>
+        </video>
+
+        <view wx:elif="{{articleDetail.audio.src}}" class="audio-wrapper">
+            <view class="left" bind:tap="onAudioPlayTap">
+                <image src="/image/icon/Icon_circle_fill.png" hidden="{{audioPlay}}"></image>
+                <image src="/image/icon/Icon_circle.png" hidden="{{!audioPlay}}"></image>
+            </view>
+            <view class="right">
+                <view class="title">{{articleDetail.audio.audioTitle}}</view>
+                <view class="author">{{articleDetail.audio.from}}</view>
+                <view class="audio-progress" style="width: {{progressWidth + 'rpx'}}">
+                    <progress
+                        stroke-width="2"
+                        percent="{{percent}}"
+                        
+                    ></progress>
+                    <view bind:touchstart="circleStart" bind:touchmove="circleMove" class="progress-circle" style="left: {{ percent + '%'}}"></view>
+                </view>
+                <view class="audio-time">
+                    <text>{{format(currentTime)}}</text>
+                    <text>{{format(articleDetail.audio.duration)}}</text>
+                </view>
+            </view>
+        </view>
+
+    </view>
+    <view class="content">
+        <text decode="true">{{filter(articleDetail.content)}}</text>
+    </view>
+    <view class="reading-quantity">
+        <text>阅读量</text>
+        <text>{{articleDetail.readNum}}</text>
+    </view>
+</view>

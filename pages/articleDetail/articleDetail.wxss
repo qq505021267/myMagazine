@@ -1,0 +1,179 @@
+/* pages/articleDetail/articleDetail.wxss */
+
+
+/* 容器样式 */
+
+.wrapper {
+    margin-top: 20rpx;
+    padding: 10rpx;
+}
+
+
+/* 标题样式 */
+
+.wrapper .title-wrapper text {
+    font-size: 48rpx;
+}
+
+
+/* 作者栏样式 */
+
+.wrapper .author-wrapper {
+    margin-top: 20rpx;
+}
+
+.author-wrapper text {
+    color: #666;
+    font-size: 28rpx;
+    margin-right: 20rpx;
+}
+
+.author-wrapper .author {
+    color: #576b95;
+}
+
+
+/* 组件样式 */
+
+.wrapper .components {
+    display: flex;
+    justify-content: center;
+    margin-top: 30rpx;
+}
+
+
+/* 轮播图组件样式 */
+
+.wrapper .components .banner {
+    width: 750rpx;
+    height: 500rpx;
+}
+
+.components .banner image {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 视频组件样式 */
+
+.components video {
+    width: 700rpx;
+    height: 500rpx;
+}
+
+.components video .video-image-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+.components video .video-image-box .play-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100rpx;
+    height: 100rpx;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 50%;
+    margin-top: -50rpx;
+    margin-left: -50rpx;
+}
+
+.video-image-box .play-box cover-image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: 20rpx;
+}
+
+.video-image-box .play-box cover-view {
+    font-size: 24rpx;
+    color: #fff;
+}
+
+
+/* 音频组件样式 */
+
+.components .audio-wrapper {
+    margin: 0 20rpx 0;
+    display: flex;
+    align-items: center;
+    padding: 30rpx;
+    background-color: #fdfdfd;
+    border: 1px solid #f2f2f2;
+    border-radius: 4rpx;
+}
+
+.audio-wrapper .left {
+    margin-right: 40rpx;
+}
+
+.audio-wrapper .left image {
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.audio-wrapper .right .title {
+    font-size: 36rpx;
+}
+
+.audio-wrapper .right .author {
+    font-size: 28rpx;
+    color: #666;
+}
+
+.audio-wrapper .right .audio-progress {
+    position: relative;
+    margin: 20rpx 0;
+    /* width: 520rpx; */
+}
+
+.audio-progress .progress-circle {
+    position: absolute;
+    top: 50%;
+    margin-top: -10rpx;
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    background-color: #00b26a;
+}
+
+.audio-wrapper .right .audio-time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.audio-wrapper .right .audio-time text {
+    color: #666;
+    font-size: 24rpx;
+}
+
+
+/* 内容样式 */
+
+.wrapper .content {
+    margin-top: 30rpx;
+    text-indent: 2em;
+}
+
+.content text {
+    font-size: 32rpx;
+    line-height: 64rpx;
+}
+
+
+/* 阅读量样式 */
+
+.wrapper .reading-quantity {
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.reading-quantity text {
+    font-size: 28rpx;
+    margin-right: 20rpx;
+}

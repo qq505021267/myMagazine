@@ -1,0 +1,132 @@
+/* pages/type/type.wxss */
+
+
+/* 文章列表样式 */
+
+
+/* 列表样式 */
+
+.list-wrapper {
+    background-color: #ebebeb;
+    padding: 35rpx 35rpx 0;
+}
+
+.list-wrapper .per-article {
+    background-color: #fff;
+    padding-bottom: 30rpx;
+    margin-bottom: 30rpx;
+}
+
+.per-article .article-head {
+    padding: 20rpx;
+}
+
+.per-article .article-head image {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.per-article .article-head text {
+    color: #666;
+    font-size: 28rpx;
+}
+
+.per-article .article-cover image {
+    width: 100%;
+}
+
+.per-article .article-title {
+    margin: 30rpx;
+}
+
+.per-article .article-title text {
+    font-size: 40rpx;
+}
+
+.per-article .article-handle-box {
+    display: flex;
+    padding: 0 30rpx;
+    justify-content: space-between;
+}
+
+.article-handle-box .article-type text {
+    font-size: 26rpx;
+    border: 2rpx solid #000;
+    padding: 10rpx 20rpx;
+}
+
+.article-handle-box .article-handle {
+    display: flex;
+}
+
+.article-handle image {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+}
+
+.article-handle button {
+    position: relative;
+    bottom: 8rpx;
+    padding: 0;
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+    background-color: transparent;
+}
+
+.article-handle button::after {
+    border: none;
+}
+
+
+/* 封面图样式 */
+
+.per-article-image {
+    position: relative;
+    width: 750rpx;
+    background-color: #ebebeb;
+}
+
+.per-article-image image {
+    width: 750rpx;
+}
+
+.per-article-image .article-handle-wrapper {
+    box-sizing: border-box;
+    position: absolute;
+    left: 45rpx;
+    bottom: -80rpx;
+    width: 660rpx;
+    background-color: #fff;
+    padding: 20rpx;
+}
+
+.article-handle-wrapper text {
+    font-size: 54rpx;
+}
+
+.article-handle-wrapper .hand-wrapper {
+    text-align: right;
+    margin-top: 10rpx;
+}
+
+.article-handle-wrapper .hand-wrapper image {
+    width: 50rpx;
+    height: 50rpx;
+    margin-right: 20rpx;
+}
+
+
+/* 文章列表样式 */
+
+.list-wrapper {
+    padding-top: 115rpx;
+}
+
+.article-handle-box .article-type text {
+    border: none;
+}

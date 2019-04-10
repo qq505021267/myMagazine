@@ -1,0 +1,26 @@
+<!--pages/search/search.wxml-->
+
+<view class="container">
+    <my-search value="{{searchWord}}"></my-search>
+
+    <view class="loadingContainer">
+        <my-loading wx:if="{{loading}}" class="loading"/>
+    </view>
+    
+    <view class="recommendContainer">
+            <text class="text">#{{tag}}></text>
+            <view class="recommendList">
+                <view class="recommend" wx:for="{{recommend}}" wx:key="*this">{{item}}</view>
+            </view>
+    </view>
+
+    <view>
+        <my-articleList more="{{more}}"
+                        articleList="{{articleList}}"
+                        magazineId=""
+                        searchWord="{{searchWord}}"
+        ></my-articleList>
+    </view>
+
+</view>
+

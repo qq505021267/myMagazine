@@ -1,0 +1,54 @@
+<!--pages/type/type.wxml-->
+
+<view class="wrapper">
+    <view class="per-article-image">
+        <view class="image-wrapper">
+            <image mode="widthFix" src="{{articleTypeTitleInfo.imgSrc}}"></image>
+        </view>
+        <view class="article-handle-wrapper">
+            <text>{{articleTypeTitleInfo.title}}</text>
+            <view class="hand-wrapper">
+                <image src="/image/list/article/icon/Icon_relay.png"></image>
+                <image src="/image/list/article/icon/Icon_more.png"></image>
+            </view>
+        </view>
+    </view>
+    <!-- 文章列表 -->
+    <view class="list-wrapper">
+        <view class="per-article" wx:for="{{HomeArticleList}}" wx:key="id">
+            <view class="article-head">
+                <image src="{{item.markPeopleAvatar}}"></image>
+                <text>{{item.markPeople}}</text>
+                <text>等</text>
+                <text>{{item.markCount}}</text>
+                <text>人马克了</text>
+            </view>
+            <view class="article-cover" bind:tap="onTitleTap" data-titleId="{{item.id}}">
+                <image mode="widthFix" src="{{item.articleImgSrc}}"></image>
+            </view>
+            <view class="article-title" bind:tap="onTitleTap" data-titleId="{{item.id}}">
+                <text>{{item.articleTitle}}</text>
+            </view>
+            <view class="article-handle-box">
+                <view class="article-type" >
+                    <text >{{item.publishTime}}</text>
+                </view>
+                <view class="article-handle">
+                    <view>
+                        <image data-type="{{item.articleType}}"src="/image/list/article/icon/Icon_more.png" bind:tap="onMoreTap"></image>
+                    </view>
+                    <view>
+                        <button open-type="share" >
+                            <image src="/image/list/article/icon/Icon_relay.png"></image>
+                        </button>        
+                    </view>
+                    <view>
+                        <image data-typelistlike="{{index}}" bind:tap="onLike" src="/image/list/article/icon/Icon_circle_fill.png" wx:if="{{typeListLike[index]}}"></image>
+                        <image data-typelistlike="{{index}}" bind:tap="onLike" src="/image/list/article/icon/Icon_circle.png" wx:else></image>
+                    </view>
+                </view>
+                
+            </view>
+        </view>
+    </view>
+</view>

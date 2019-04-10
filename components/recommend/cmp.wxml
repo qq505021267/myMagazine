@@ -1,0 +1,10 @@
+<!--components/recommend/cmp.wxml-->
+<view class="container">
+    <text class="date">{{magazineId == 0 ? date : magazineTypeArr[magazineId]}}</text>
+    <text class="title">{{recommend.title}}</text>
+    <image class="image" src="{{recommend.imgSrc}}" wx:if="{{recommend}}"></image>
+
+    <view class="skeleton" wx:if="{{!recommend}}">
+        <view class="loader"></view>
+    </view>
+</view>

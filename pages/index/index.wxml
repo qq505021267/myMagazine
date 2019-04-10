@@ -1,0 +1,21 @@
+<!--pages/index/index.wxml-->
+
+<view class="loadingWrapper" wx:if="{{loading}}">
+    <my-loading class="loading"></my-loading>
+</view>
+
+
+<my-navigation class="navigation" catch:navigation="onNavTap"></my-navigation>
+
+<my-recommend class="recommend" magazineId="{{magazineId}}" recommend="{{recommendInfo}}"></my-recommend>
+
+<my-tagList markList="{{markList}}">
+    <my-add slot="before" wx:if="{{magazineId == 0}}"></my-add>
+    <view slot="after" class="toCatalog" catch:tap="onCatalog" wx:if="{{magazineId == 0}}">●●●</view>
+</my-tagList>
+
+<my-articleList articleList="{{articleList}}" 
+                more="{{getMore}}"
+                magazineId="{{magazineId}}"
+></my-articleList>
+

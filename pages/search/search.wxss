@@ -1,0 +1,39 @@
+/* pages/search/search.wxss */
+
+.container .recommendContainer {
+    border-top: 2rpx solid #000;
+    border-bottom: 2rpx solid #000;
+    width: 700rpx;
+    margin: 70rpx auto;
+    padding-top: 70rpx;
+    padding-bottom: 70rpx;
+}
+
+.recommendContainer .text {
+    display: inline-block;
+    font-size: 50rpx;
+    margin-bottom: 50rpx;
+}
+
+.recommendContainer .recommendList {
+    font-size: 24rpx;
+}
+
+.recommendList .recommend {
+    margin-top: 10rpx;
+}
+
+.container .loadingContainer {
+    position: fixed;
+    width: 750rpx;
+    height: 1054rpx;
+    background-color: #fff;
+}
+
+.loadingContainer .loading {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -30rpx;
+    margin-top: -30rpx;
+}
